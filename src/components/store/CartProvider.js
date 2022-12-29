@@ -13,17 +13,28 @@ const CartProvider = props => {
         }
         else{
             let existingItem = items[ItemIndex]
-            let newItem = {...existingItem,quantity:Number(existingItem.quantity)+Number(item.quantity)}
-            items.splice(ItemIndex,1)  
+            let newItem = {...existingItem,quantity:Number(existingItem.quantity)+Number(item.quantity)}  
             console.log(items)   
-            setItems([...items.slice(0,ItemIndex),newItem,...items.slice(ItemIndex)])
+            setItems([...items.slice(0,ItemIndex),newItem,...items.slice(ItemIndex+1)])
             // setItems([...items,newItem])
         }
        
         console.log(ItemIndex)
 
     }
-    const removeItemFromCartHandler = id => {}
+    const removeItemFromCartHandler = id => {
+        const ItemIndex = items.findIndex(x=>x.id===id)
+        let existingItem = items[ItemIndex]
+        if(existingItem.quantity>1){
+            let newItem = {...existingItem,quantity:Number(existingItem.quantity)-1}
+            setItems([...items.slice(0,ItemIndex),newItem,...items.slice(ItemIndex+1)])
+        }
+        else{
+            setItems([...items.slice(0,ItemIndex),...items.slice(ItemIndex+1)])
+        }
+        
+        
+    }
 
     const cartContext={
         items:items,
