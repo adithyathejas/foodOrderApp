@@ -5,7 +5,7 @@
     padding-bottom: 1rem;
     padding-left: 2rem;
     border-bottom: 1px solid #ccc;
-  }
+}
   
   .meal h3 {
     margin: 0 0 0.25rem 0;
@@ -23,8 +23,8 @@
   .price {
     margin-top: 0.25rem;
     font-weight: bold;
-    color: #ad5502;
-    font-size: 1.25rem;
+    color: #ffffff;
+    font-size: 1.5rem;
     padding-left: 7rem;
     box-align: center;
   }
@@ -34,9 +34,9 @@
     -moz-border-radius: 28;
     border-radius: 28px;
     font-family: Georgia;
-    color: #000000;
+    color: #f1ebeb;
     font-size: 20px;
-    background: #d97b34;
+    background: #058e25;
     padding: 0px 11px 0px 12px;
     text-decoration: none;
   }

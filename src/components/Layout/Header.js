@@ -1,4 +1,4 @@
-import mealsImage from '../../assets/meals.jpg'
+import mealsImage from '../../assets/meal.jpg'
 import HeaderCartButton from './HeaderCartButton'
 
 import './Header.css'
@@ -6,7 +6,8 @@ import './Header.css'
 const Header = props => {
     return <>
     <header className='header'>
-        <h1>React Meals</h1>
+        <h1>Nila Palace</h1>
+        <h3>Order Online</h3>
         <HeaderCartButton onShownCart={props.onShowCart} onHideCart={props.onHideCart}/>
     </header>
     <div>

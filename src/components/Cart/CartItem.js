@@ -16,7 +16,7 @@ const CartItem = (props) => {
 
   return (
        <div className={classes.meal}>
-        <div><h3>{item.name}</h3></div> <div className={classes.price}>{item.price}</div> <div className={classes.quantity}>x{item.quantity}<div><button onClick={removeItemFromCart} className={classes.btn}>-</button></div></div>
+        <div><h3>{item.name}</h3></div> <div className={classes.price}>{item.price}</div> <div className={classes.quantity}>x{item.quantity}<button onClick={removeItemFromCart} className={classes.btn}>-</button></div>
     </div>
     
   );
